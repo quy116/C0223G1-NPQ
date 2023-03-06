@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = +prompt('nhập số tiền bill vào');
+    let inputPeople = +prompt('nhập số người được chia');
+    let inputTips = +prompt('nhập mức độ hài lòng đơn vị %');
+    let sum;
+    let result;
+    if (inputTips >= 30) {
+        sum = input * inputTips / 100;
+        console.log(sum);
+        result = sum / inputPeople;
+        document.write('số tiền tip là ' + result);
+    } else if (inputTips >= 20) {
+        sum = input * inputTips / 100;
+        console.log(sum);
+        result = sum / inputPeople;
+        document.write('số tiền tip là ' + result);
+    } else if (inputTips >= 15) {
+        sum = input * inputTips / 100;
+        console.log(sum);
+        result = sum / inputPeople;
+        document.write('số tiền tip là ' + result);
+    } else if (inputTips >= 10) {
+        sum = input * inputTips / 100;
+        console.log(sum);
+        result = sum / inputPeople;
+        document.write('số tiền tip là ' + result);
+    } else if (inputTips >= 5) {
+        sum = input * inputTips / 100;
+        console.log(sum);
+        result = sum / inputPeople;
+        document.write('số tiền tip là ' + result);
+    }
+    console.log(result)
+</script>
+
+</body>
+</html>
