@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <fieldset style="width:300px;background: bisque">
+        <center>
+            Tip Caculator
+        </center>
+        <table>
+            <tr>
+                <td>
+                    <label for="bill">How much was your bill ?</label>
+                </td>
+            </tr>
+            <tr>
+                <td>$<input type="text" id="bill"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="ser">How was your service ?</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <select id="ser">
+                        <option id="30" value="30">30% - Outstanding</option>
+                        <option id="20" value="20">20% - Good</option>
+                        <option id="15" value="15">15% - It was OK</option>
+                        <option id="10" value="10">10% - Bad</option>
+                        <option id="5" value="5">5% - Terrible</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="people">How many people are sharing the bill?</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="people"> People
+                </td>
+            </tr>
+            <tr>
+
+                <td>
+                    <center>
+                        <button type="button" onclick="kiemTra()" style="background: darkred;width:200px">CALCULATE!
+                        </button>
+                    </center>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center>
+                        Tips Amount
+                    </center>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center> $<label></label> <span id="sum"></span></center>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <center>
+                        each
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
+<script>
+    function kiemTra() {
+        let bill = parseInt(document.getElementById('bill').value);
+        let person = parseInt(document.getElementById('people').value);
+        let ser = parseInt(document.getElementById('ser').value);
+        let tips = ((bill * ser) / 100) / person;
+        switch (ser) {
+            case 30:
+                document.getElementById('sum').innerText = tips;
+                break;
+            case 20:
+                document.getElementById('sum').innerText = tips;
+                break;
+            case 15:
+                document.getElementById('sum').innerText = tips;
+                break;
+            case 10:
+                document.getElementById('sum').innerText = tips;
+                break;
+            case 5:
+                document.getElementById('sum').innerText = tips;
+                break;
+        }
+
+    }
+
+    // let input = +prompt('nhập số tiền bill vào');
+    // let inputPeople = +prompt('nhập số người được chia');
+    // let inputTips = +prompt('nhập mức độ hài lòng đơn vị %');
+    // let sum;
+    // let result;
+    // if (inputTips >= 30) {
+    //     sum = input * inputTips / 100;
+    //     console.log(sum);
+    //     result = sum / inputPeople;
+    //     document.write('số tiền tip là ' + result);
+    // } else if (inputTips >= 20) {
+    //     sum = input * inputTips / 100;
+    //     console.log(sum);
+    //     result = sum / inputPeople;
+    //     document.write('số tiền tip là ' + result);
+    // } else if (inputTips >= 15) {
+    //     sum = input * inputTips / 100;
+    //     console.log(sum);
+    //     result = sum / inputPeople;
+    //     document.write('số tiền tip là ' + result);
+    // } else if (inputTips >= 10) {
+    //     sum = input * inputTips / 100;
+    //     console.log(sum);
+    //     result = sum / inputPeople;
+    //     document.write('số tiền tip là ' + result);
+    // } else if (inputTips >= 5) {
+    //     sum = input * inputTips / 100;
+    //     console.log(sum);
+    //     result = sum / inputPeople;
+    //     document.write('số tiền tip là ' + result);
+    // }
+    // console.log(result)
+</script>
+
+</body>
+</html>

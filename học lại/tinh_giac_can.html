@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+  <h2>tính tam giác cân</h2>
+  <label for="a">độ dài cạnh A</label>
+  <input type="text" id="a" placeholder="  nhập độ dài cạnh a"> </br> </br>
+  <label for="b">độ dài cạnh B</label>
+  <input type="text" id="b" placeholder="  nhập độ dài cạnh b"> </br></br>
+  <label for="c">độ dài cạnh C</label>
+  <input type="text" id="c" placeholder="  nhập độ dài cạnh c"> </br></br>
+  <button type="button" onclick="kiemTra()">kiểm tra</button>
+  <p id="result"></p>
+</form>
+<script>
+  function kiemTra() {
+    let canhA = parseInt(document.getElementById('a').value);
+    let canhB = parseInt(document.getElementById('b').value);
+    let canhC = parseInt(document.getElementById('c').value);
+    if (canhA + canhB < canhC || canhB + canhC < canhA || canhC + canhA < canhB ){
+      document.getElementById('result').innerText = 'không phải tam giác';
+    } else if (canhA  === Math.sqrt(Math.pow(canhB,2) + Math.pow(canhC,2))) {
+      document.getElementById('result').innerText = 'là tam giác vuông';
+    }
+    else if (canhB  === Math.sqrt(Math.pow(canhC,2) + Math.pow(canhA,2))) {
+      document.getElementById('result').innerText = 'là tam giác vuông';
+    }
+    else if (canhC  === Math.sqrt(Math.pow(canhA,2) + Math.pow(canhB,2))) {
+      document.getElementById('result').innerText = 'là tam giác vuông';
+    } else {
+      document.getElementById('result').innerText = ' không phải là  tam giác vuông';
+    }
+  }
+
+</script>
+
+</body>
+</html>
