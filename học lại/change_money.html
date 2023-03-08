@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" id="money" placeholder="nhập vào số tiền cần đổi">
+    <select id="moneyName">
+        <option value="vnd">VND</option>
+        <option value="usd">USD</option>
+        <option value="jyp">JYP</option>
+        <option value="rmb">RMB</option>
+        <option value="gbp">GBP</option>
+    </select>
+    <select id="moneyName1">
+        <option value="vnd">VND</option>
+        <option value="usd">USD</option>
+        <option value="jyp">JYP</option>
+        <option value="rmb">RMB</option>
+        <option value="gbp">GBP</option>
+    </select>
+    <button type="button" onclick="onClick()"> change</button>
+    <p id="result"></p>
+
+</form>
+<script>
+    function onClick() {
+        let money = document.getElementById('money').value;
+        let moneyName = document.getElementById('moneyName').value;
+        let moneyName1 = document.getElementById('moneyName1').value;
+        let result;
+        let dollar;
+        switch (moneyName) {
+            case 'vnd':
+                dollar = money / 23000;
+                break;
+            case 'jyp':
+                dollar = money / 136.53;
+                break;
+            case 'rmb':
+                dollar = money / 6.9;
+                break;
+            case 'gbp':
+                dollar = money / 0.84;
+                break;
+            case  'usd':
+                dollar = money;
+        }
+        switch (moneyName1) {
+            case 'vnd':
+                result = dollar * 23000;
+                break;
+            case 'jyp':
+                result = dollar * 136.53;
+                break;
+            case 'rmb':
+                result = dollar * 6.9;
+                break;
+            case 'gbp':
+                result = dollar * 0.84;
+                break;
+            case  'usd':
+                result = dollar * 1;
+        }
+       document.getElementById('result').innerText = result;
+    }
+
+
+
+</script>
+
+</body>
+</html>
