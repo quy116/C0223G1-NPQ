@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let inputDad;
+  let inputSon;
+  do {
+    inputDad = +prompt('nhap tuoi cha');
+    inputSon = +prompt('nhap tuoi con');
+  } while (inputDad <= (inputSon + 25))
+  for (let i = 0; ; i++){
+
+    if ((inputDad / inputSon) === 2) {
+     document.write('so tuoi hon la' +i)
+     document.write(inputDad)
+     document.write(inputSon)
+      break;
+    }
+      inputDad++
+      inputSon++
+  }
+  console.log(inputDad);
+  console.log(inputSon);
+</script>
+
+</body>
+</html>

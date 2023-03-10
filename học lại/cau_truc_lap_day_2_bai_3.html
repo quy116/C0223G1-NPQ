@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = +prompt('nhập số vào')
+    let count = 0;
+    for (let i = 1; i <= input; i++){
+        if (input % i === 0) {
+            count +=1
+        }
+    }
+    if (count === 2 ) {
+        alert('snt')
+    } else {
+        alert('k phải snt')
+    }
+</script>
+
+</body>
+</html>

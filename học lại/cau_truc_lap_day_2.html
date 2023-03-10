@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let inputLength = +prompt('nhap do dai mang vao');
+  let arr = [];
+  for (let i = 0; i < inputLength; i++){
+    let mang = prompt('nhap phan tu vao mang vao');
+    arr.push(mang);
+  }
+  let inputFind = +prompt('nhap vi tri can tim vao');
+  for (let i = 0; ; i++){
+    if (inputFind > 0 && inputFind < arr.length){
+      alert(arr[inputFind])
+      break;
+    }else {
+      alert('nhap lai');
+      inputFind = +prompt('nhap vi tri can tim vao');
+    }
+  }
+</script>
+
+</body>
+</html>
