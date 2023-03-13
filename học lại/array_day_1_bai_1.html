@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+      let input = +prompt('nhập độ dài của mảng')
+      let arr = [];
+      for (let i = 0; i < input; i++) {
+          let elementArr = +prompt('nhập phần tử')
+          arr.push(elementArr)
+      }
+      console.log(arr)
+      let soChan = 0;
+      let soLe = 0;
+      for (let i = 0; i < arr.length; i++) {
+          if (i % 2 === 0) {
+              soChan++
+          } else {
+              soLe++
+          }
+      }
+      console.log(soChan, soLe)
+      if (soChan === soLe) {
+          alert('ok')
+      } else {
+          alert('No')
+      }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let input = +prompt('nhập độ dài của mảng')
+  let arr = [];
+  for (let i = 0; i < input; i++) {
+    let elementArr = +prompt('nhập phần tử')
+    arr.push(elementArr)
+  }
+  console.log(arr)
+  for (let j = 0; j < arr.length; j++) {
+      if (arr[j] % Math.sqrt(arr[j]) === 0) {
+          document.write(arr[j] + "<br/>");
+      }
+  }
+</script>
+</body>
+</html>

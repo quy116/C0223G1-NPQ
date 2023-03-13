@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let arrTwoWay = [];
+  let n = prompt("Nhập vào số lượng mảng") * 1;
+  for (let i = 0; i < n; i++) {
+    let arrLength = [];
+    let m = prompt("Nhập vào chiều dài mảng") * 1;
+    for (let j = 0; j < m; j++) {
+      arrLength[j] = prompt("Nhập phần tử thứ " + j + " Của mảng " + i) * 1
+    }
+    arrTwoWay.push(arrLength);
+  }
+  console.log(arrTwoWay);
+  let sum1 = 0;
+  for (let i = 0; i < arrTwoWay.length; i++) {
+    for (let j = 0; j < arrTwoWay.length; j++) {
+      if (i === j) {
+        sum1 += arrTwoWay[i][j];
+      }
+    }
+  }
+  console.log(sum1);
+  let sum2 = 0;
+  for (let i = 0; i < arrTwoWay.length; i++) {
+    for (let j = 0; j < arrTwoWay.length; j++) {
+      if (j === (arrTwoWay.length - 1) - i) {
+        sum2 += arrTwoWay[i][j];
+      }
+    }
+  }
+  console.log(sum2);
+  alert("Tổng 2 đường chéo là : " + (sum1 + sum2));
+
+</script>
+</body>
+</html>
