@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="from" placeholder=" nhập vào dây" >
+<button type="button" id="btn" onclick="kiemTra()">submit</button>
+<script>
+  let arr = [];
+  let arrLength = prompt("Nhập vào độ dài của mảng") * 1;
+  for (let i = 0; i < arrLength; i++) {
+    let numb = prompt("Nhập vào phần tử của mảng") * 1;
+    if (arr.indexOf(numb) === -1){
+      arr.push(numb);
+    }else {
+      alert("nhap lai mang");
+      i--;
+    }
+  }
+  console.log(arr);
+</script>
+</body>
+</html>
