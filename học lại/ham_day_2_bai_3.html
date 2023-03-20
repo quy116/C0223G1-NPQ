@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = +prompt('nhập độ dài của mảng')
+    let from = [];
+    for (let i = 0; i < input; i++) {
+        let elementArr = prompt('nhập phần tử')
+        from.push(elementArr)
+    }
+    thayThe2 = []
+    for (let i = 0; i < from[0].length; i++) {
+        let thayThe = from[0][i];
+        thayThe2.push(thayThe);
+    }
+    console.log(thayThe2)
+    let count = 0;
+    for (let i = 0; i < thayThe2.length; i++) {
+        if (i > -1) {
+            count++
+        }
+    }
+    if (count !== 4) {
+        alert(-1)
+    } else {
+        alert(1)
+    }
+    let sum = 0;
+   for (let i = 0; i < thayThe2.length -1; i++){
+       if (thayThe2[i] < thayThe2[i +1]) {
+           thayThe2.splice(i,1)
+           console.log(thayThe2)
+           break;
+       } else {
+           sum++
+       }
+       if (sum === 3) {
+           thayThe2.pop()
+       }
+   }
+
+    console.log(sum)
+    console.log(thayThe2)
+</script>
+</body>
+</html>

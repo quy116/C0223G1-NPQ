@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputA = +prompt('nhap canh A vao');
+    let inputB = +prompt('nhap canh B vao');
+    let inputC = +prompt('nhap canh c vao');
+
+    function kiemTra(a, b, c) {
+        if (a + b < c || a + c < b || b + c < a) {
+            alert("đây không phải là tam giác");
+        }else if (Math.pow(a,2)===(Math.pow(b,2)+Math.pow(c,2))) {
+            alert("đây là tam giác vuông");
+        }else if (Math.pow(b,2)===(Math.pow(a,2)+Math.pow(c,2))) {
+            alert("đây là tam giác vuông");
+        }else if (Math.pow(c,2)===(Math.pow(b,2)+Math.pow(a,2))) {
+            alert("đây là tam giác vuông");
+        }else {
+            alert("đây là một tam giác");
+        }
+    }
+
+    kiemTra(inputA, inputB, inputC)
+</script>
+
+</body>
+</html>

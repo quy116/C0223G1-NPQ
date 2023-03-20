@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="tableAccount"></div>
+<br>
+<!--<input type="number" id="from" placeholder="ban muon nap tien?" >-->
+<!--<button id="btn" type="button" onclick="napTien()">nhan de nap</button>-->
+<!--<p id="result"></p>-->
+<script>
+  class Bank {
+    constructor(numberAccount, nameAccount, moneyAccount) {
+      this.numberAccount = numberAccount;
+      this.nameAccount = nameAccount;
+      this.moneyAccount = moneyAccount;
+    }
+    getNumberAccount() {
+      return this.numberAccount;
+    };
+    setNumberAccount(numberAccount) {
+      this.numberAccount = numberAccount;
+    }
+    getNameAccount() {
+      return this.nameAccount;
+    };
+    setNameAccount(nameAccount) {
+      this.nameAccount = nameAccount;
+    }
+    getMoneyAccount() {
+      return this.nameAccount;
+    };
+    setMoneyAccount(moneyAccount) {
+      this.moneyAccount = moneyAccount;
+    }
+    toString() {
+        return 'number Acc :' + this.numberAccount + 'name acc :' + this.nameAccount
+    }
+    napTien(soTien) {
+        this.moneyAccount += soTien;
+    }
+    truTien(soTien) {
+        this.moneyAccount -= soTien;
+    }
+  }
+  let acc1 = new Bank('001', 'Quý1' , 100)
+  let acc2 = new Bank('001', 'Quý2' , 100)
+  let acc3 = new Bank('001', 'Quý3' , 100)
+  let listAcc = [];
+  listAcc.push(acc1,acc2,acc3)
+  console.log(listAcc)
+  function addMoney(i ) {
+      let m = +prompt('nhap tien');
+      listAcc[i].napTien(m);
+      displayListAcc(listAcc);
+  }
+  function addTrutien(i) {
+      let m = +prompt('nhap tien');
+      listAcc[i].truTien(m);
+      displayListAcc(listAcc)
+  }
+  function displayListAcc(listAcc) {
+      let table = "<table border='2' style='border-collapse: collapse'>";
+      table += "<tr>" +
+          "<th>ID</th>" +
+          "<th>NAME</th>" +
+          "<th>MONEY</th>" +
+          "<th>MONEY</th>" +
+          "</tr>";
+      for (let i = 0; i < listAcc.length; i++) {
+          table += "<tr>" +
+              "<td>"+listAcc[i].numberAccount+"</td>" +
+              "<td>"+listAcc[i].nameAccount+"</td>" +
+              "<td>"+listAcc[i].moneyAccount+' $'+"</td>" +
+              "<td onclick='addMoney("+ i +")'>nap tien</td>" +
+              "<td onclick='addTrutien("+ i +")'>tru tien</td>" +
+              "</tr>";
+      }
+      table+= "</table>";
+      document.getElementById("tableAccount").innerHTML = table;
+  }
+  displayListAcc(listAcc)
+</script>
+
+</body>
+</html>
