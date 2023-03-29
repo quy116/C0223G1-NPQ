@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = +prompt('nhap do dai mang vao');
+    let arr = [];
+    for (let i = 0; i < input; i++) {
+        let inputArr = +prompt('nhap phan tu vao')
+        arr.push(inputArr);
+    }
+
+
+    function checkFi(arr) {
+        let max = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (max < arr[i]) {
+                max = arr[i];
+            }
+        }
+        let array = [];
+        let a = 1;
+        let b = 0;
+        let temp;
+        for (let i = 0; i < 1000; i++) {
+            temp = a;
+            a = a + b;
+            b = temp;
+            array.push(b,a)
+        }
+        console.log(array)
+    }
+    let array = [];
+    let a = 1;
+    let b = 0;
+    let temp;
+    for (let i = 0; i < 1000; i++) {
+        temp = a;
+        a = a + b;
+        b = temp;
+        array.push(b,a)
+    }
+    console.log(array)
+</script>
+
+</body>
+</html>

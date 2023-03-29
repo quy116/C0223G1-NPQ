@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = +prompt('nhap do dai mang vao');
+    let arr = [];
+    for (let i = 0; i < input; i++) {
+        let inputArr = prompt('nhap phan tu vao')
+        arr.push(inputArr);
+    }
+    vietHoa(arr)
+    function vietHoa(arr) {
+        if (arr.length === 1) {
+            return alert('chuoi chi co 1 tu nen k can viet tat');
+        }
+        let newArr = []
+        for (let i = 0; i < arr.length; i++) {
+           arr[i].toLowerCase()
+            newArr.push(arr[i])
+
+        }
+        console.log(newArr)
+
+    }
+</script>
+
+</body>
+</html>

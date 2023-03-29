@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="hienThi"></div>
+<button onclick="addNewLaptop()">add new con cac</button>
+<script>
+    class MayTinh {
+        constructor(ma, tenMay, tenHang, gia) {
+            this.ma = ma;
+            this.tenMay = tenMay;
+            this.tenHang = tenHang;
+            this.gia = gia;
+        }
+
+        setMa(ma) {
+            this.ma = ma;
+        }
+
+        setTenMay(tenMay) {
+            this.tenMay = tenMay;
+        }
+
+        setTenHang(tenHang) {
+            this.tenHang = tenHang
+        }
+
+        setGia(gia) {
+            this.gia = gia;
+        }
+
+        getMa() {
+            return this.ma
+        }
+
+        getTenMay() {
+            return this.tenMay;
+        }
+
+        getTenHang() {
+            return this.tenHang;
+        }
+
+        getGia() {
+            return this.gia;
+        }
+
+        ToString() {
+        return 'ten ma may la :'+ this.getMa() +'ten may la :' + this.getTenMay() + 'ten hang la : ' + this.getTenHang() + 'gia tien la : '+ this.getGia();
+        }
+    }
+    let mayTinh = new MayTinh('stt01','macbook', 'Apple',2000);
+    let listMaytinh = [];
+    listMaytinh.push(mayTinh);
+    function addNewLaptop() {
+        let id = prompt('nhap ID may vao');
+        let tenMay = prompt('nhap ten may vao');
+        let tenHang = prompt('nhap ten hang vao');
+        let giaTien = +prompt('nhap gia tien vao');
+        let mayTinh = new MayTinh(id,tenMay,tenHang,giaTien);
+        listMaytinh.push(mayTinh);
+        hienThi(listMaytinh);
+    }
+    hienThi(listMaytinh)
+    function hienThi(arr) {
+        let table = '<table border="1">\n';
+        table += ' <tr>\n' +
+            '        <th>ma may</th>\n' +
+            '        <th>ten may</th>\n' +
+            '        <th>ten hang</th>\n' +
+            '        <th>gia tien</th>\n' +
+            '    </tr>'
+        for (let i = 0; i < arr.length ; i++) {
+            table += '<tr>\n' +
+                '        <td>'+arr[i].ma+'</td>\n' +
+                '        <td>'+arr[i].tenMay+'</td>\n' +
+                '        <td>'+arr[i].tenHang+'</td>\n' +
+                '        <td>'+arr[i].gia+'</td>\n' +
+                '    </tr>'
+        }
+        table += '</table>'
+        document.getElementById('hienThi').innerHTML = table;
+
+    }
+</script>
+
+</body>
+</html>
